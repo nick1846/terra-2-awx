@@ -20,7 +20,7 @@ sg_description   = "Security group for web-server and ssh access"
 sg_ingress_cidr  = ["0.0.0.0/0"]
 sg_ingress_rules = ["https-443-tcp", "http-80-tcp", "ssh-tcp"]
 sg_egress_cidr   = ["0.0.0.0/0"]
-sg_egress_rules = ["all-all"]
+sg_egress_rules  = ["all-all"]
 
 #my-ec2-values
 

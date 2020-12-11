@@ -1,0 +1,91 @@
+
+variable "aws_region" {  
+}
+
+#my-vpc-variables
+
+variable "my_vpc_name" {  
+}
+
+variable "my_vpc_cidr" {  
+}
+
+variable "my_vpc_azs" {  
+}
+
+variable "my_vpc_private_subnets" {  
+}
+
+variable "my_vpc_public_subnets" {  
+}
+
+variable "my_vpc_nat_gateway_bool" {  
+}
+
+variable "my_vpc_tags" {     
+}
+
+variable "my_public_subnets_tags" {  
+}
+
+variable "my_private_subnets_tags" {  
+}
+
+variable "my_igw_tags" {  
+}
+
+#my-sg-variables
+
+variable "my_sg_name" {  
+}
+
+variable "sg_description" {  
+}
+
+variable "sg_ingress_cidr" {  
+}
+
+variable "sg_ingress_rules" {  
+}
+
+variable "sg_egress_cidr" {
+  description = "List of IPv4 CIDR ranges to use on all egress rules"
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+}
+
+variable "sg_egress_rules" {  
+}
+
+#my-ec2-variables
+
+variable "my_ec2_name" {
+}
+
+variable "ec2_count" {  
+}
+
+variable "ec2_type" {  
+}
+
+variable "ec2_tags" {  
+}
+
+#my-data-subnet
+
+variable "subnet_tag" {
+}
+
+variable "subnet_value" {    
+}
+
+#my-data-ami
+
+variable "ami_tag" {
+}
+
+variable "ami_value" {    
+}
+
+variable "ami_owner" {    
+}

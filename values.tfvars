@@ -9,8 +9,8 @@ my_vpc_private_subnets  = ["10.0.1.0/24"]
 my_vpc_public_subnets   = ["10.0.100.0/24"]
 my_vpc_nat_gateway_bool = "false"
 my_vpc_tags             = { Name = "terra-2-vpc"}
-my_public_subnets_tags  = { Name = "terra-2-public-subnet-A" }
-my_private_subnets_tags = { Name = "terra-2-private-subnet-A" }
+my_public_subnets_tags  = { Name = "terra-2-public-subnet-a" }
+my_private_subnets_tags = { Name = "terra-2-private-subnet-a" }
 my_igw_tags             = { Name = "terra-2-igw" }
 
 #my-sg-values

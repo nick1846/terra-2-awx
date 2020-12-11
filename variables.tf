@@ -71,14 +71,6 @@ variable "ec2_type" {
 variable "ec2_tags" {  
 }
 
-#my-data-subnet
-
-variable "subnet_tag" {
-}
-
-variable "subnet_value" {    
-}
-
 #my-data-ami
 
 variable "ami_tag" {

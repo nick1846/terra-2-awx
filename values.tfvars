@@ -29,11 +29,6 @@ ec2_count   = 1
 ec2_type    = "t2.micro" 
 ec2_tags    = { Name = "web-server"}
 
-#my-data-subnet
-
-subnet_tag   = "tag:Name"
-subnet_value = ["terra-2-public-subnet-A"] 
-
 #my-data-ami
 
 ami_tag   = "name"

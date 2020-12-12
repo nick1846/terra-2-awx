@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_eip" "single" {
-  count = 2  
+  count = 1  
   vpc = true
   instance = element(module.my_ec2.id, count.index)  
 }

@@ -25,20 +25,17 @@ sg_egress_rules = ["all-all"]
 #my-ec2-values
 
 my_ec2_name = "web-server"
-ec2_count   = 1
+ec2_count   = 2
 ec2_type    = "t2.micro" 
 ec2_tags    = { Name = "web-server"}
-
-#my-data-subnet
-
-subnet_tag   = "tag:Name"
-subnet_value = ["terra-2-public-subnet-A"] 
 
 #my-data-ami
 
 ami_tag   = "name"
 ami_value = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
 ami_owner = ["099720109477"]
+
+
 
 
 

@@ -84,7 +84,7 @@ variable "ec2_tags" {
 variable "most_recent_bool" {
 }
 
-variable "ami_tag" {
+variable "ami_tag_type" {
 }
 
 variable "ami_value" {    

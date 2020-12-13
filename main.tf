@@ -48,7 +48,7 @@ module "my_ec2" {
 }
 
 data "aws_ami" "ubuntu-focal-fossa" {
-  most_recent = true
+  most_recent = var.most_recent_bool
   filter {
     name    = var.ami_tag
     values  = var.ami_value

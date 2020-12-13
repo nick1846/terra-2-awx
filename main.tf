@@ -2,6 +2,12 @@ provider "aws" {
   region = var.aws_region
 }
 
+resource "aws_eip" "for_each" {
+  count = 1  
+  vpc = true
+  instance = element(module.my_ec2.id, count.index)  
+}
+
 module "my_vpc" {
   source              = "terraform-aws-modules/vpc/aws"
   name                = var.my_vpc_name
@@ -14,7 +20,9 @@ module "my_vpc" {
   public_subnet_tags  = var.my_public_subnets_tags  
   private_subnet_tags = var.my_private_subnets_tags
   igw_tags            = var.my_igw_tags
+  
 }
+
 
 module "my_sg" {
   source              = "terraform-aws-modules/security-group/aws" 
@@ -36,16 +44,16 @@ module "my_ec2" {
   vpc_security_group_ids = [ module.my_sg.this_security_group_id ]
   subnet_id              = element(module.my_vpc.public_subnets, 0)
   user_data              = file("userdata.sh")
-  tags                   = var.ec2_tags
-  
+  tags                   = var.ec2_tags  
 }
 
 data "aws_ami" "ubuntu-focal-fossa" {
-  most_recent = true
+  most_recent = var.most_recent_bool
   filter {
     name    = var.ami_tag
     values  = var.ami_value
   }
   owners      = var.ami_owner
 }
+
 

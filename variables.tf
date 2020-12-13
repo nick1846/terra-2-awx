@@ -73,6 +73,9 @@ variable "ec2_tags" {
 
 #my-data-ami
 
+variable "most_recent_bool" {
+}
+
 variable "ami_tag" {
 }
 

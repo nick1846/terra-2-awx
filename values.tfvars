@@ -30,6 +30,7 @@ ec2_type    = "t2.micro"
 ec2_tags    = { Name = "web-server"}
 
 #my-data-source-values
+
 most_recent_bool = "true"
 ami_tag          = "name"
 ami_value        = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]

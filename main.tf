@@ -50,7 +50,7 @@ module "my_ec2" {
 data "aws_ami" "ubuntu-focal-fossa" {
   most_recent = var.most_recent_bool
   filter {
-    name    = var.ami_tag
+    name    = var.ami_tag_type
     values  = var.ami_value
   }
   owners      = var.ami_owner

@@ -2,6 +2,14 @@
 variable "aws_region" {  
 }
 
+#my-eip-variables
+
+variable "my_eip_count" {  
+}
+
+variable "vpc_bool" {  
+}
+
 #my-vpc-variables
 
 variable "my_vpc_name" {  

@@ -1,5 +1,10 @@
 aws_region = "us-east-1"
 
+#my-eip-values
+
+my_eip_count = 1
+vpc_bool     = "true"
+
 #my-vpc-values
 
 my_vpc_name             = "terra-2-vpc"

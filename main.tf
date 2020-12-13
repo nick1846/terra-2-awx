@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 resource "aws_eip" "for_each" {
-  count = 1  
-  vpc = true
+  count    = var.my_eip_count  
+  vpc      = var.vpc_bool
   instance = element(module.my_ec2.id, count.index)  
 }
 

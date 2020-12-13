@@ -37,7 +37,7 @@ ec2_tags    = { Name = "web-server"}
 #my-data-source-values
 
 most_recent_bool = "true"
-ami_tag          = "name"
+ami_tag_type     = "AMI Name"
 ami_value        = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
 ami_owner        = ["099720109477"]
 

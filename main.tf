@@ -2,7 +2,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_eip" "single" {
+resource "aws_eip" "for_each" {
   count = 1  
   vpc = true
   instance = element(module.my_ec2.id, count.index)  

@@ -10,6 +10,6 @@ sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-sudo git clone https://github.com/nick1846/docker-compose.git
-cd docker-compose
+sudo git clone https://github.com/nick1846/docker.git
+cd /docker/docker-compose
 sudo docker-compose up -d

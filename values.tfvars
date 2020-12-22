@@ -1,11 +1,8 @@
 aws_region = "us-east-1"
 
-#my-key-values
-my_publickey = ""
-
 #my-eip-values
-
-vpc_bool = "true"
+eip_count = 1
+vpc_bool  = "true"
 
 #my-vpc-values
 

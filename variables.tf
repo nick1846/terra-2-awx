@@ -2,6 +2,11 @@
 variable "aws_region" {  
 }
 
+#key-pair variables
+
+variable "my_key" {
+}
+
 #my-eip-variables
 
 variable "vpc_bool" {  

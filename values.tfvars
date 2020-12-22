@@ -1,8 +1,11 @@
 aws_region = "us-east-1"
 
+#my-key-values
+my_key = ""
+
 #my-eip-values
 
-vpc_bool     = "true"
+vpc_bool = "true"
 
 #my-vpc-values
 

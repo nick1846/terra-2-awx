@@ -2,9 +2,9 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_key_pair" "ec2-user" {
-  key_name   = "ec2-user-key"
-  public_key = var.my_key
+resource "aws_key_pair" "ec2-user-public" {
+  key_name   = "ec2-user-publickey"
+  public_key = var.my_publickey
 }
 
 resource "aws_eip" "for_each" {

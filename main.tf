@@ -2,8 +2,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_key_pair" "ec2-user-public" {
-  key_name   = "ec2-user-publickey"
+resource "aws_key_pair" "ubuntu-public" {
+  key_name   = "ubuntu-publickey"
   public_key = var.my_publickey
 }
 
@@ -43,6 +43,7 @@ module "my_sg" {
 module "my_ec2" {
   source                 = "terraform-aws-modules/ec2-instance/aws"  
   name                   = var.my_ec2_name
+  key_name               = "ubuntu-publickey"
   instance_count         = var.ec2_count
   ami                    = data.aws_ami.ubuntu-focal-fossa.id
   instance_type          = var.ec2_type

@@ -2,11 +2,6 @@
 variable "aws_region" {  
 }
 
-#key-pair variables
-
-variable "my_publickey" {
-}
-
 #my-eip-variables
 
 variable "eip_count" {

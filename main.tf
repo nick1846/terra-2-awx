@@ -2,6 +2,11 @@ provider "aws" {
   region = var.aws_region
 }
 
+resource "aws_key_pair" "ec2-user" {
+  key_name   = "ec2-user-key"
+  public_key = var.my_key
+}
+
 resource "aws_eip" "for_each" {
   vpc      = var.vpc_bool
   instance = element(module.my_ec2.id, count.index)  

@@ -2,6 +2,11 @@
 variable "aws_region" {  
 }
 
+#key-pair variables
+
+variable "my_key" {
+}
+
 #my-vpc-variables
 
 variable "my_vpc_name" {  

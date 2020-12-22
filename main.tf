@@ -3,8 +3,7 @@ provider "aws" {
 }
 
 resource "aws_eip" "for_each" {
-  count = 1  
-  vpc = true
+  vpc      = var.vpc_bool
   instance = element(module.my_ec2.id, count.index)  
 }
 
@@ -50,7 +49,7 @@ module "my_ec2" {
 data "aws_ami" "ubuntu-focal-fossa" {
   most_recent = var.most_recent_bool
   filter {
-    name    = var.ami_tag
+    name    = var.ami_tag_type
     values  = var.ami_value
   }
   owners      = var.ami_owner

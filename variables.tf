@@ -2,6 +2,11 @@
 variable "aws_region" {  
 }
 
+#my-eip-variables
+
+variable "vpc_bool" {  
+}
+
 #my-vpc-variables
 
 variable "my_vpc_name" {  
@@ -76,7 +81,7 @@ variable "ec2_tags" {
 variable "most_recent_bool" {
 }
 
-variable "ami_tag" {
+variable "ami_tag_type" {
 }
 
 variable "ami_value" {    

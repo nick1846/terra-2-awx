@@ -1,7 +1,7 @@
 aws_region = "us-east-1"
 
 #my-key-values
-my_key = ""
+my_publickey = ""
 
 #my-eip-values
 

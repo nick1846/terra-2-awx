@@ -8,6 +8,7 @@ resource "aws_key_pair" "ec2-user-public" {
 }
 
 resource "aws_eip" "for_each" {
+  count    = 1
   vpc      = var.vpc_bool
   instance = element(module.my_ec2.id, count.index)  
 }

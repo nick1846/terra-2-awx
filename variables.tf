@@ -4,7 +4,7 @@ variable "aws_region" {
 
 #key-pair variables
 
-variable "my_key" {
+variable "my_publickey" {
 }
 
 #my-eip-variables

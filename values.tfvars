@@ -38,6 +38,7 @@ ec2_count   = 1
 ec2_type    = "t2.xlarge" 
 ec2_tags    = { Name = "awx-server"}
 
+
 #my-data-source-values
 
 most_recent_bool = "true"

@@ -2,8 +2,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_key_pair" "ubuntu-public" {
-  key_name   = "ubuntu-publickey"
+resource "aws_key_pair" "ec2-user-public" {
+  key_name   = var.my_key_name  
   public_key = var.my_publickey
 }
 
@@ -43,9 +43,9 @@ module "my_sg" {
 module "my_ec2" {
   source                 = "terraform-aws-modules/ec2-instance/aws"  
   name                   = var.my_ec2_name
-  key_name               = "ubuntu-publickey"
+  key_name               = var.my_key_name 
   instance_count         = var.ec2_count
-  ami                    = data.aws_ami.ubuntu-focal-fossa.id
+  ami                    = data.aws_ami.my_ami.id
   instance_type          = var.ec2_type
   vpc_security_group_ids = [ module.my_sg.this_security_group_id ]
   subnet_id              = element(module.my_vpc.public_subnets, 0)
@@ -53,7 +53,7 @@ module "my_ec2" {
   tags                   = var.ec2_tags  
 }
 
-data "aws_ami" "ubuntu-focal-fossa" {
+data "aws_ami" "my_ami" {
   most_recent = var.most_recent_bool
   filter {
     name    = var.ami_tag_type

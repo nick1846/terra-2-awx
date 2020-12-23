@@ -34,7 +34,7 @@ sg_egress_rules  = ["all-all"]
 
 my_ec2_name = "web-server"
 ec2_count   = 1
-ec2_type    = "t2.micro" 
+ec2_type    = "t2.xlarge" 
 ec2_tags    = { Name = "web-server"}
 
 #my-data-source-values

@@ -12,12 +12,12 @@ python3 -m pip install docker-compose
 
 mkdir awx
 cd awx/
-git clone https://github.com/nick1846/awx-users.git
+git clone https://github.com/nick1846/linux-users-role.git
 git clone https://github.com/nick1846/awx-project.git
 cd awx-project/installer/
 ansible-playbook -i inventory install.yml
 
 
-cd ../../awx-users/
+cd ../../linux-users-role/
 ansible-playbook -i hosts.yaml main.yaml
 

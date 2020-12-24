@@ -35,7 +35,7 @@ sg_egress_rules  = ["all-all"]
 
 my_ec2_name = "awx-server"
 ec2_count   = 1
-ec2_type    = "t2.xlarge" 
+ec2_type    = "t2.large" 
 ec2_tags    = { Name = "awx-server"}
 
 

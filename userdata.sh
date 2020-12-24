@@ -11,11 +11,11 @@ python3 -m pip install --user --upgrade pip # Do not run pip as sudo. Do this in
 python3 -m pip install ansible
 python3 -m pip install docker-compose
 
-git clone https://github.com/nick1846/awx-users.git
-cd awx-users/
-ansible-playbook -i hosts.yaml main.yaml
-
 git clone https://github.com/nick1846/awx-project.git
 cd awx-project/installer/
 ansible-playbook -i inventory install.yml
+
+git clone https://github.com/nick1846/awx-users.git
+cd awx-users/
+ansible-playbook -i hosts.yaml main.yaml
 

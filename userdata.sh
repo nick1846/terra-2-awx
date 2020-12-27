@@ -21,7 +21,7 @@ ansible-playbook -i inventory install.yml
 cd home/ec2-user/
 ansible-galaxy collection install awx.awx
 
-cd home/ec2-user/awx-configure-tower
+cd home/ec2-user/awx-configure-tower/
 ansible-playbook -i hosts main.yaml
 
 cd home/ec2-user/linux-users-role/

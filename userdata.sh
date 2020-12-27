@@ -18,8 +18,6 @@ git clone https://github.com/nick1846/awx.git
 cd /home/ec2-user/awx/installer/
 ansible-playbook -i inventory install.yml
 
-ansible-galaxy collection install awx.awx
-
 cd /home/ec2-user/awx-configure-tower/
 ansible-playbook -i hosts main.yaml
 

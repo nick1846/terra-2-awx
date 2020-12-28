@@ -18,9 +18,6 @@ git clone https://github.com/nick1846/awx.git
 cd /home/ec2-user/awx/installer/
 ansible-playbook -i inventory install.yml
 
-#cd /home/ec2-user/awx-configure-tower/
-#ansible-playbook -i hosts main.yaml
-
 cd /home/ec2-user/linux-users-role/
 ansible-playbook -i hosts.yaml main.yaml
 

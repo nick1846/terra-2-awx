@@ -4,6 +4,7 @@ sudo amazon-linux-extras install epel -y
 sudo yum install git -y
 sudo amazon-linux-extras install docker
 sudo service docker start
+sudo systemctl enable docker
 sudo usermod -a -G docker ec2-user
 sudo yum install -y  python3-pip
 python3 -m pip install --user --upgrade pip # Do not run pip as sudo. Do this instead.

@@ -16,9 +16,9 @@ sudo yum install -y python-devel
 cd /home/ec2-user/
 git clone https://github.com/nick1846/awx-configure-tower.git
 git clone https://github.com/nick1846/linux-users-role.git
-git clone https://github.com/nick1846/awx.git
+git clone https://github.com/nick1846/awx-new.git
 
-cd /home/ec2-user/awx/installer/
+cd /home/ec2-user/awx-new/installer/
 ansible-playbook -i inventory install.yml
 
 cd /home/ec2-user/linux-users-role/

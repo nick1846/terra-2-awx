@@ -11,7 +11,6 @@ python3 -m pip install --user --upgrade pip # Do not run pip as sudo. Do this in
 python3 -m pip install ansible
 python3 -m pip install docker-compose
 sudo pip3 install docker
-sudo yum install -y python-devel 
 
 cd /home/ec2-user/
 git clone https://github.com/nick1846/awx-configure-tower.git
